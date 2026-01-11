@@ -70,6 +70,7 @@ header {
 }
 
 /* Top course title bar */
+/* FIXED: child combinator '>' */
 header>h1 {
   margin: 0;
   background: var(--primary-700);
@@ -116,6 +117,7 @@ nav[aria-label="Main navigation"] li {
 /* =========================
    Page title under nav
    ========================= */
+/* FIXED: child combinator '>' */
 main>h1 {
   margin: 24px auto 12px;
   text-align: center;
@@ -356,7 +358,11 @@ footer p {
   background: #d7ecf6;
 }
 
+/* =========================
+   Minimal alignment fixes
+   ========================= */
 
+/* Page grid with 3/4 vs 1/4 split (later rule overrides earlier 1fr 1fr) */
 main {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -365,9 +371,22 @@ main {
   align-items: start;
 }
 
+/* Title spans across the grid */
 main>h1 {
   grid-column: 1 / -1;
 }
+
+/* Pin cards to columns to ensure side-by-side alignment */
+main>section.card.card1 {
+  grid-column: 1;
+}
+
+/* left column */
+main>section.card.card2 {
+  grid-column: 2;
+}
+
+/* right column */
 
 @media (max-width: 900px) {
   main {
