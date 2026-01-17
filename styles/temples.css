@@ -1,0 +1,194 @@
+/* Base Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.temple-gallery figcaption {
+  font-family: Poppins, Roboto, sans-serif;
+}
+
+/*  Page Frame */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  padding: 0.5rem;
+  background-color: #eee;
+}
+
+/* Navigation - Mobile */
+nav {
+  background-color: #ace;
+  /* keep your original color */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  position: relative;
+  /* allows dropdown to sit under the bar */
+}
+
+/* Title inside nav */
+nav p {
+  margin: 0;
+  padding: 0.25rem 0;
+  border: 0;
+  background: transparent;
+  color: #000;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vmin, 1.75rem);
+}
+
+/* Hamburger toggle at the far right */
+#menu {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  color: #000;
+  /* dark icon on light #ace */
+  margin-left: auto;
+  /* pushes the toggle fully right */
+}
+
+#menu::before {
+  content: "≡";
+}
+
+#menu.show::before {
+  content: "X";
+}
+
+/* Dropdown list: hidden by default on mobile, lives in the same tab */
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: none;
+  /* collapsed on small screens */
+  width: 100%;
+  background-color: #ace;
+  /* same color as the bar */
+}
+
+/* When JS toggles .show on the UL, reveal as centered vertical list */
+.navigation.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center each link */
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Safety: hide items until .show is applied */
+.navigation li {
+  display: none;
+}
+
+.navigation.show li {
+  display: block;
+}
+
+/* Links (mobile) */
+.navigation a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  /* centered for touch */
+  text-decoration: none;
+  color: #000;
+  /* readable on #ace */
+  font-weight: 700;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-size: clamp(1rem, 2vmin, 1.1rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+  color: #fff;
+  background-color: #000;
+  /* strong contrast on hover */
+}
+
+/* Focus visible for keyboard users */
+.navigation a:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ========== Gallery (Mobile-first) ========== */
+.temple-section {
+  padding: 1rem;
+}
+
+/* 1 column on mobile */
+.temple-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* ensure single column on small */
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Card look */
+.temple-gallery figure {
+  margin: 0;
+  border: 1px solid rgb(0 0 0 / 0.08);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Uniform image size */
+.temple-gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  /* square thumbnails; change to 4/3 if preferred */
+  object-fit: cover;
+  /* crop without distortion */
+  display: block;
+}
+
+/* Caption */
+.temple-gallery figcaption {
+  padding: 0.5rem 0.75rem;
+  background: #f8f8f8;
+  font-size: clamp(0.9rem, 1.8vmin, 1rem);
+  line-height: 1.35;
+}
+
+footer {
+  text-align: center; 
+  padding: 1rem;
+}

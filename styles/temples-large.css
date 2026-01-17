@@ -1,0 +1,68 @@
+@media only screen and (min-width: 40em) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Desktop nav bar setup */
+  nav {
+    background-color: #ace;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 1rem;
+    padding: .75rem 1rem;
+  }
+
+  .navigation {
+    display: flex;
+    margin-left: auto;
+    /* push all links to the right */
+    justify-content: flex-end;
+    /* align row to the right */
+    align-items: center;
+    /* vertical centering */
+    gap: 2rem;
+    /* equal spacing between links */
+    background: transparent;
+    padding: 0;
+    width: auto;
+  }
+
+  .navigation li {
+    display: block;
+
+    flex: 0 0 auto;
+
+  }
+
+  .navigation a {
+    text-align: center;
+    color: #000;
+    padding: .25rem .5rem;
+  }
+
+  .navigation a:hover,
+  .navigation a:active {
+    color: #fff;
+    background-color: #000;
+    border-radius: .25rem;
+  }
+
+  /* Hide hamburger toggle on large screens */
+  #menu {
+    display: none;
+  }
+
+  /* Large-screen gallery layout */
+  .temple-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+  }
+}
