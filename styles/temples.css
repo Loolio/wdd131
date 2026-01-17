@@ -7,7 +7,7 @@
 
 /* Typography */
 body {
-  font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 h1,
@@ -189,6 +189,6 @@ nav p {
 }
 
 footer {
-  text-align: center; 
+  text-align: center;
   padding: 1rem;
 }
