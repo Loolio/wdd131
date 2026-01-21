@@ -11,7 +11,7 @@
   /* dark gray navigation bar */
   --text: #222;
   --muted: #666;
-  --link: #1a73e8;
+  --link: #76b1ff;
   --footer-accent: #ffe66d;
 
   --radius: 10px;
@@ -90,6 +90,7 @@ header>h1 {
 nav[aria-label="Main navigation"] {
   background: var(--nav-bg);
   box-shadow: var(--shadow);
+  color: #d8dde2;
 }
 
 nav[aria-label="Main navigation"] ul {
@@ -215,10 +216,6 @@ main>section.card.card2 {
   padding-bottom: 8px;
   color: #333;
   font-size: 15px;
-}
-
-/* Thin divider to mimic the sample under the intro paragraph */
-.card.card1 .paragraph-1 {
   position: relative;
 }
 
@@ -271,10 +268,6 @@ main>section.card.card2 {
   grid-area: country;
 }
 
-.card.card1 .pic-2 {
-  grid-area: pic2;
-}
-
 .card.card1 .paragraph-2 {
   grid-area: p2;
 }
@@ -290,7 +283,7 @@ main>section.card.card2 {
 
 /* Country label styling (acts as a sub-caption) */
 .card.card1 .country {
-  color: #777;
+  color: #73737377;
   font-size: 12px;
   font-style: italic;
   padding-top: 4px;
@@ -298,11 +291,13 @@ main>section.card.card2 {
 
 /* Lodwar photo box with border to the left */
 .card.card1 .pic-2 {
+  margin-left: 16px;
   border: 1px solid var(--border);
   padding: 0;
   background: #fff;
   align-self: start;
   max-width: 320px;
+  grid-area: pic2;
 }
 
 .card.card1 .pic-2 img {
