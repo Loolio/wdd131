@@ -283,7 +283,7 @@ main>section.card.card2 {
 
 /* Country label styling (acts as a sub-caption) */
 .card.card1 .country {
-  color: #73737377;
+  color: #666666;
   font-size: 12px;
   font-style: italic;
   padding-top: 4px;
