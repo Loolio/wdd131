@@ -154,6 +154,7 @@ dd {
   padding: 1.25rem 0;
   background: #fff;
   border-top: 4px solid var(--clr-primary);
+  color: var(--clr-text);
 }
 
 .footer-grid {
