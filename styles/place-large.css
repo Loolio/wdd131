@@ -1,10 +1,7 @@
 /* styles/place-large.css */
-/* ────────────────────────────────────────────────────────────────────────────
-   Wide/Desktop overrides
-   ──────────────────────────────────────────────────────────────────────────── */
+
 @media (min-width: 900px) {
 
-  /* Hero: positioned ancestor, clipping & nice frame */
   .hero {
     position: relative;
     isolation: isolate;
@@ -19,20 +16,19 @@
   /* Image layer under the overlay cards */
   .hero-img {
     position: relative;
-    /* keep relative so it sizes naturally */
     z-index: 1;
     display: block;
     width: 100%;
     height: auto;
   }
 
-  /* Overlay cards (shared) */
+  /* Overlay cards */
   .data-card,
   .weather-card {
     position: absolute;
     z-index: 10;
     /* above the image */
-    /* SAFE width so two cards never collide with 2rem insets */
+
     width: clamp(240px, 24vw, 310px);
     padding: 1.1rem 1.25rem;
     background: rgba(255, 255, 255, 0.96);
