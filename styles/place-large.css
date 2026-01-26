@@ -1,0 +1,61 @@
+/* styles/place-large.css */
+/* ────────────────────────────────────────────────────────────────────────────
+   Wide/Desktop overrides
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 900px) {
+
+  /* Hero: positioned ancestor, clipping & nice frame */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: min(96%, var(--maxw));
+    margin: 2rem auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: transparent;
+  }
+
+  /* Image layer under the overlay cards */
+  .hero-img {
+    position: relative;
+    /* keep relative so it sizes naturally */
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Overlay cards (shared) */
+  .data-card,
+  .weather-card {
+    position: absolute;
+    z-index: 10;
+    /* above the image */
+    /* SAFE width so two cards never collide with 2rem insets */
+    width: clamp(240px, 24vw, 310px);
+    padding: 1.1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e6e6e6;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+  }
+
+  /* Top-left data card */
+  .data-card {
+    top: 6%;
+    left: 2rem;
+    border-left: 6px solid var(--clr-secondary);
+  }
+
+  /* ⬇️ Weather card moved to the BOTTOM (bottom-right) */
+  .weather-card {
+    bottom: 2rem;
+    /* bottom of the hero */
+    right: 2rem;
+    /* keep to the far end */
+    border-left: 6px solid var(--clr-primary);
+  }
+}
+
+/* Slight tightening on the narrower end of “large” */

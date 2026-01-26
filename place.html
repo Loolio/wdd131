@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kakuma, Kenya</title>
+    <meta name="description" content="Dynamic Web Fundamentals course page. Using Design principles, image file formats for responsive web pages and images on small and large screens!">  
+    <meta name="author" content="Ekimomwor Peter LOOLIO"> 
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/getdates.js" defer></script> 
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="place-title">Kakuma, Kenya</h1>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+
+    <figure class="hero" aria-label="Hero image">
+      <img
+        class="hero-img"
+        src="images//kakumalandscape.webp"
+        srcset="
+          images/kakumalandscape.webp 700w,
+          images/kakumalandscape-large.webp 1600w
+        "
+        sizes="(min-width: 900px) 100vw, 100vw"
+        alt="A wide landscape view representing Kakuma, Kenya"
+      >
+      <figcaption class="visually-hidden">Landscape of Kakuma</figcaption>
+
+      <!-- Data Card -->
+      <section class="card data-card" aria-labelledby="data-heading">
+        <h2 id="data-heading">Data</h2>
+
+        <dl class="data-list">
+          <div class="row"><dt>Country</dt><dd>Kenya</dd></div>
+          <div class="row"><dt>County</dt><dd>Turkana</dd></div>
+          <div class="row"><dt>Region</dt><dd>Rift Valley</dd></div>
+          <div class="row"><dt>Coordinates</dt><dd>3.71°N, 34.86°E</dd></div>
+          <div class="row"><dt>Elevation</dt><dd>500m above sea level</dd></div>
+          <div class="row"><dt>Time Zone</dt><dd>EAT</dd></div>
+        </dl>
+      </section>
+
+      <!-- Weather Card -->
+      <section class="card weather-card" aria-labelledby="weather-heading">
+        <h2 id="weather-heading" class="weather-title">Weather</h2>
+
+        <!-- Weather icon (mobile only) -->
+        <img
+          class="weather-icon-mobile"
+          src="images/weathericon.png"
+          alt="Partly cloudy icon"
+          width="56"
+          height="56"
+        >
+
+        <dl class="data-list weather-list">
+          <div class="row"><dt>Temperature</dt><dd><span id="temp">8</span> °C</dd></div>
+          <div class="row"><dt>Wind Speed</dt><dd><span id="wind">10</span> km/h</dd></div>
+          <div class="row"><dt>Conditions</dt><dd>Partly Cloudy</dd></div>
+          <div class="row"><dt>Wind Chill</dt><dd><span id="windchill">N/A</span></dd></div>
+        </dl>
+      </section>
+    </figure>
+  </main>
+<footer>
+  <p>&copy; <span id="currentYear">2026</span> |Ekimomwor Peter LOOLIO | Kenya 👍|</p>
+  <p id="lastModified">Last lastModified: </p>
+</footer>
+
+</body>
+</html>
