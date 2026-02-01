@@ -1,9 +1,5 @@
 :root {
-  --purple: rgb(10, 58, 100);
-  --blue: rgb(29, 77, 114);
-  --blue-1: rgba(29, 77, 114, 0.1);
-  --blue-7: rgba(29, 77, 114, 0.7);
-  --brown: rgba(100, 50, 25, 1);
+  --blue: rgb(10, 58, 100);
   --yellow: rgba(255, 255, 0, 1);
 }
 
@@ -19,7 +15,7 @@ body {
 }
 
 header {
-  background-color: var(--purple);
+  background-color: var(--blue);
   color: white;
   display: flex;
   flex-direction: row;
@@ -143,7 +139,7 @@ section img {
 
 
 footer {
-  background-color: var(--purple);
+  background-color: var(--blue);
   color: white;
   text-align: center;
   padding: 10px;
