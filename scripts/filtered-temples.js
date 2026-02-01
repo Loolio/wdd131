@@ -70,8 +70,22 @@ const temples = [
     area: 116642,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+  },
+  {  
+    templeName: "Billings Montana",
+    location: "Billings, Montana, United States",
+    dedicated: "1999, November, 20",
+    area: 33800,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/billings-montana/800x500/01-Billings-Montana-Temple-2220702.jpg"
+  },
+  {
+    templeName: "Nairobi Kenya",
+    location: "Nairobi, Kenya",
+    dedicated: "2025, May, 18",
+    area: 12345, 
+    imageUrl:"https://www.churchofjesuschrist.org/imgs/xbrnlkgvoumomut7itk86rrpepzrej7pax1mvuzz/full/640%2C/0/default.jpg"
   }
-
 ];
 
 createTempleCard();
