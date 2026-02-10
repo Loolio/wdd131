@@ -93,10 +93,10 @@ textarea {
 }
 
 /* Rating stars */
-.rating-group {
-  display: flex;
-  gap: 0.7rem;
-  margin-top: 0.5rem;
+.rating-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .rating-group input[type="radio"] {
@@ -118,3 +118,4 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #ccc;
 }
+
