@@ -1,3 +1,4 @@
+
 // products.js
 const products = [
   {
@@ -26,3 +27,11 @@ const products = [
     averagerating: 5.0
   }
 ];
+
+// Update last modified date in footer
+document.addEventListener("DOMContentLoaded", () => {
+  const modElement = document.getElementById("lastModified");
+
+});
+
+  
