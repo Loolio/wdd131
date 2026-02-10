@@ -69,9 +69,13 @@ footer {
 
 /* Labels */
 label {
-  display: block;
+  display: inline-block;
   margin: 0.8rem 0 0.3rem;
   color: #333;
+}
+
+.features-group label {
+  display: block;
 }
 
 /* Inputs */
@@ -93,15 +97,28 @@ textarea {
 }
 
 /* Rating stars */
-.rating-group label {
+.rating-stars {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
 }
 
-.rating-group input[type="radio"] {
+.rating-stars input[type="radio"] {
   margin-right: 0.2rem;
 }
+
+
+label[for="f1"],
+label[for="f2"],
+label[for="f3"],
+label[for="f4"] {
+  display: block;
+  /* each on its own line */
+  margin-block: 0.25rem;
+  /* vertical spacing */
+  cursor: pointer;
+}
+
 
 /* Submit */
 input[type="submit"] {
@@ -121,9 +138,9 @@ input[type="submit"]:hover {
 
 /* Layout on larger screens */
 @media (min-width: 769px) {
-  .rating-group {
+  .rating-stars {
+    display: flex;
     flex-direction: row;
-    /* horizontal */
     gap: 0.8rem;
   }
 }
