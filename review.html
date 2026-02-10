@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Product Review Submitted</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+
+<header><h1>Review Submitted</h1></header>
+
+<main>
+
+  <section class="card">
+
+    <h2>Thank you for your review!</h2>
+
+    <div id="summary"></div>
+    <p><strong>Total Reviews Submitted:</strong> <span id="count"></span></p>
+
+    <a href="form.html"><button style="width:100%; padding:0.8rem; margin-top:1rem;">Submit Another Review</button></a>
+
+  </section>
+
+</main>
+
+<footer>
+  ©2026 |Ekimomwor Peter LOOLIO | Kenya 👍|
+  Last Modification: <span id="lastmodified"></span>
+</footer>
+
+<script>
+  document.getElementById("lastmodified").textContent = document.lastModified;
+
+  // READ QUERY STRING
+  const params = new URLSearchParams(window.location.search);
+
+  let html = `
+    <p><strong>Product:</strong> ${params.get("product") || "(none)"}</p>
+    <p><strong>Rating:</strong> ${params.get("rating") || "(none)"} Stars</p>
+    <p><strong>Date of Installation:</strong> ${params.get("installDate") || "(none)"}</p>
+    <p><strong>Features:</strong> ${(params.getAll("features").join(", ") || "(none)")}</p>
+    <p><strong>Review:</strong> ${params.get("review") || "(none)"}</p>
+    <p><strong>Your Name:</strong> ${params.get("username") || "(none)"}</p>
+  `;
+  
+  document.getElementById("summary").innerHTML = html;
+
+  // Counter
+  let count = Number(localStorage.getItem("reviewCount") || 0);
+  count++;
+  localStorage.setItem("reviewCount", count);
+  document.getElementById("count").textContent = count;
+</script>
+
+</body>
+</html>

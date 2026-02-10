@@ -1,0 +1,120 @@
+/* General Reset */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Page layout: vertical stack */
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: #f5f5f5;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Center the stack content */
+main {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1rem;
+}
+
+/* ─────────────────────────────────────────────
+   Make HEADER and FOOTER look like cards, too
+   (same treatment as .card)
+   ───────────────────────────────────────────── */
+header,
+footer {
+  /* Card look */
+  background-color: #d8d0d9;
+  /* same as .card */
+  color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+
+  /* Centered card sizing */
+  width: 100%;
+  max-width: 450px;
+  margin: 1.5rem auto 0;
+  /* header top margin */
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Footer spacing: bottom margin to breathe */
+footer {
+  margin: 1.5rem auto 2rem;
+}
+
+/* Card (form container) */
+.card {
+  background-color: #d8d0d9;
+  max-width: 450px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 0.8rem 0 0.3rem;
+  color: #333;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #777;
+  border-radius: 6px;
+  background-color: #eee;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Rating stars */
+.rating-group {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.rating-group input[type="radio"] {
+  margin-right: 0.2rem;
+}
+
+/* Submit */
+input[type="submit"] {
+  width: 100%;
+  background-color: #ddd;
+  border: 1px solid #999;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1.2rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #ccc;
+}
