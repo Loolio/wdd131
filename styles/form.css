@@ -119,3 +119,11 @@ input[type="submit"]:hover {
   background-color: #ccc;
 }
 
+/* Layout on larger screens */
+@media (min-width: 769px) {
+  .rating-group {
+    flex-direction: row;
+    /* horizontal */
+    gap: 0.8rem;
+  }
+}
