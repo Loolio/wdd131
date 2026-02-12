@@ -29,10 +29,7 @@ main {
   padding: 0 1rem;
 }
 
-/* ─────────────────────────────────────────────
-   Make HEADER and FOOTER look like cards, too
-   (same treatment as .card)
-   ───────────────────────────────────────────── */
+/* Header and footer as card */
 header,
 footer {
   /* Card look */

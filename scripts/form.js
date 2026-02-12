@@ -37,4 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     opt.value = item.id;           // what to submit 
     select.appendChild(opt);
   });
+
+const modElement = document.getElementById("lastModified");
+if (modElement) {
+  modElement.textContent = document.lastModified;
+}  
+
 });
