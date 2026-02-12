@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     select.appendChild(opt);
   });
 
+  // Update last modified date in footer
 const modElement = document.getElementById("lastModified");
 if (modElement) {
   modElement.textContent = document.lastModified;
