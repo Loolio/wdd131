@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell an Item - Turkanaboy Market Hub</title>
+  <link rel="stylesheet" href="styles/sell.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">Turkanaboy <span>Market Hub</span></a>
+    <button id="menu" class="menu-btn">☰</button>
+
+    <ul id="primary-nav" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sell.html">Sell</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="form-page">
+  <h1>Post an ad</h1>
+  <p>List your item for sale and connect with buyers in Turkana County.</p>
+
+<form id="sellForm">
+
+  <label>
+    Item Name*
+    <input type="text" id="itemName" required>
+  </label>
+
+  <label>
+    Price (KES)*
+    <input type="number" id="itemPrice" min="1" required>
+  </label>
+
+  <label>
+    Category*
+    <select id="itemCategory" required>
+      <option value="">Select...</option>
+      <option value="electronics">Electronics</option>
+      <option value="household">Household items</option>
+      <option value="household">Cosmetic products</option>
+      <option value="transport">Vehicles and cars</option>
+      <option value="household">Car spare parts</option>
+      <option value="fashion">Fashion</option>
+      <option value="tools">Hardware Tools</option>
+      <option value="art">Artifacts</option>
+      <option value="weaved items">Basketry and Beading</option>
+    </select>
+  </label>
+
+  <label>
+    Location*
+    <input type="text" id="itemLocation" required>
+  </label>
+
+  <label>
+    Description*
+    <textarea id="itemDescription" rows="4" required></textarea>
+  </label>
+
+  <label>
+    Upload Image*
+    <input type="file" id="itemImage" accept="image/*" required>
+  </label>
+
+  <label class="checkbox-row">
+  <input type="checkbox" id="terms" required>
+  I confirm this listing complies with allowed item rules.
+</label>
+
+  <button type="submit" class="btn primary">Submit Listing</button>
+
+</form>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-bar">
+    <p>&copy; <span id="currentYear"></span> Turkanaboy Market Hub</p>
+    <p><a href="references.html">References</a></p>
+  </div>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

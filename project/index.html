@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Ekimomwor Peter LOOLIO</title>
+  <meta name="description" content="A website page for posting local classifieds, enabling residents to list products and services and improving access to goods across Turkana County.">
+  <meta name="author" content="Ekimomwor Peter LOOLIO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/sell.css">
+  <script src="scripts/sell.js" defer></script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">TurkanaConnect <span>Market Hub</span></a>
+
+      <button id="menu" class="menu-btn" aria-expanded="false">☰</button>
+
+      <ul id="primary-nav" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Buy & Sell in Turkana County</h1>
+        <p>Post items for sale and browse local deals across Kainuk, Lokichar, Lokori, Lodwar, Makutano, Kaeris, Kaaleng, Lowareng'ak, Lokitaung, Kakuma, Kakuma Refugee Camp, Kalobeyei Settlement, and Lokichoggio.</p>
+
+        <div class="hero-actions">
+          <a href="sell.html" class="btn primary">Sell an Item</a>
+          <a href="#products" class="btn ghost">Browse Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section id="products" class="product-section">
+      <div class="section-head">
+        <h2>Latest Items</h2>
+
+        <div class="view-buttons">
+          <button id="gridView" class="view-btn">Grid</button>
+          <button id="listView" class="view-btn">List</button>
+        </div>
+      </div>
+
+      
+<!-- 🔍 SEARCH BAR (Styled like your screenshot) -->
+<div class="search-wrapper">
+  <input 
+    type="text"
+    id="searchInput"
+    class="search-box"
+    placeholder="Search TurkanaConnect Market Hub..."
+    aria-label="Search products"
+  >
+  <button id="searchBtn" class="search-btn" aria-label="Start search">
+    🔍
+  </button>
+</div>
+</div>
+
+
+      <div id="productGrid" class="product-grid">
+        <!-- Dynamic JS inserts products here -->
+      </div>
+    </section>
+
+    <!-- FAQ (from site plan scenarios) -->
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>Which items are not allowed to be uploaded for sale?</summary>
+        <p>Illegal goods, weapons, adult content, and counterfeit products are prohibited.</p>
+      </details>
+
+      <details>
+        <summary>Are prices inclusive of delivery costs?</summary>
+        <p>No. Delivery arrangements must be agreed between buyer and seller.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bar">
+      <p>&copy; <span id="currentYear"></span> TurkanaConnect Hub • Built by Ekimomwor Peter LOOLIO</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
+
+<footer>
+  <p>&copy; 2026 Marketplace | Developed by Ekimomwor Peter LOOLIO</p>
+</footer>
+
+</body>
+</html>
