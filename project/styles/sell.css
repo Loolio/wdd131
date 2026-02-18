@@ -67,6 +67,7 @@ a:hover {
   position: absolute;
   left: -9999px;
   top: auto;
+
 }
 
 .skip-link:focus {
@@ -78,25 +79,39 @@ a:hover {
 
 /* Header and navigation */
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
+  background: #1877f2;
+  border-bottom: none;
+  color: #fff;
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
+}
+
+.logo {
+  color: #fff !important;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .75rem 1rem;
+  padding: .6rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo span {
-  color: var(--primary);
+  color: #fff !important;
 
+}
+
+.nav-links a {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 .menu-btn {
@@ -104,6 +119,7 @@ a:hover {
   background: none;
   border: none;
   cursor: pointer;
+  color: #fff;
 }
 
 .nav-links {
