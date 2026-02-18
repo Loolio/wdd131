@@ -79,7 +79,8 @@ a:hover {
 
 /* Header and navigation */
 .site-header {
-  background: #1877f2;
+  background: #3b5998;
+  ;
   border-bottom: none;
   color: #fff;
   position: sticky;
@@ -106,7 +107,7 @@ a:hover {
 }
 
 .nav-links a {
-  color: #fff !important;
+  color: var(--text) !important;
   font-weight: 500;
 }
 
@@ -146,6 +147,10 @@ a:hover {
 @media (min-width: 768px) {
   .menu-btn {
     display: none;
+  }
+
+  .nav-links a {
+    color: #ffffff !important;
   }
 
   .nav {
@@ -192,6 +197,68 @@ a:hover {
   font-weight: 700;
 }
 
+/* --------------------------------------------------------- */
+/* Uniform styles for hero buttons: Sell an Item / Browse     */
+/* --------------------------------------------------------- */
+
+/* Base link reset */
+a.btn:link,
+a.btn:visited {
+  text-decoration: none;
+  outline: none;
+  transition: all 0.18s ease;
+  cursor: pointer;
+}
+
+/* Hover (same behavior for both buttons) */
+a.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Active (pressed) */
+a.btn:active {
+  transform: translateY(0);
+  opacity: 0.90;
+}
+
+/* Focus (keyboard navigation, accessibility) */
+a.btn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* PRIMARY BUTTON (Sell an Item) */
+a.btn.primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+a.btn.primary:hover {
+  background: #0e5edc;
+}
+
+a.btn.primary:active {
+  background: #0d56ca;
+}
+
+/* GHOST BUTTON (Browse Products) */
+a.btn.ghost {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+a.btn.ghost:hover {
+  background: rgba(26, 115, 232, 0.12);
+}
+
+a.btn.ghost:active {
+  background: rgba(26, 115, 232, 0.18);
+}
+
 /* Primary button  */
 button[type="submit"].btn.primary {
   background: var(--primary);
@@ -214,15 +281,6 @@ button[type="submit"].btn.primary:disabled {
 
 .btn.primary:hover {
   background: #0e5edc;
-}
-
-.btn.ghost {
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-.btn.ghost:hover {
-  background: rgba(26, 115, 232, 0.1);
 }
 
 /* Product section */
